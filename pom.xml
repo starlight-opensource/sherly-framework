@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.starlight-software</groupId>
+    <artifactId>sherly-framework</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <name>sherly-framework</name>
+    <description>sherly-framework-${revision}</description>
+    <url>sherly.starlight-software.cn</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://gitee.com/starlight-opensource/sherly-springcloud.git</connection>
+        <developerConnection>scm:git:ssh://gitee.com/starlight-opensource/sherly-springcloud.git</developerConnection>
+        <url>https://gitee.com/starlight-opensource/sherly-springcloud</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>谷子毅(Gucci)</name>
+            <email>504305797@qq.com</email>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>sherly-common</module>
+        <module>sherly-mybatis</module>
+        <module>sherly-redis</module>
+        <module>sherly-security</module>
+        <module>sherly-rpc</module>
+        <module>sherly-excel</module>
+        <module>sherly-xxljob</module>
+        <module>sherly-web</module>
+        <module>sherly-pulsar</module>
+        <module>sherly-env</module>
+        <module>sherly-test</module>
+        <module>sherly-ip</module>
+    </modules>
+
+    <properties>
+        <revision>2.0.7</revision>
+        <serverId>central</serverId>
+        <!-- 核心框架 -->
+        <spring-boot.version>2.7.8</spring-boot.version>
+        <!-- 微服务框架 -->
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
+        <alibaba.nacos.version>2.0.4</alibaba.nacos.version>
+
+
+        <!-- 以下依赖都是不在spring相关dependencies下的，所以要固定版本号，禁止随意修改 -->
+        <!-- 文档框架 -->
+        <swagger.version>2.2.8</swagger.version>
+        <knife4j.version>4.5.0</knife4j.version>
+        <swagger.version>2.2.8</swagger.version>
+        <springdoc.version>1.6.14</springdoc.version>
+        <!-- ORM框架 -->
+        <mybatis-plus.version>3.5.7</mybatis-plus.version>
+        <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
+        <redisson.version>3.18.0</redisson.version>
+        <!-- 服务框架 -->
+        <xxljob.version>2.4.1</xxljob.version>
+        <flowable.version>6.8.0</flowable.version>
+        <pulsar.version>2.11.0</pulsar.version>
+        <minio.version>8.5.1</minio.version>
+        <!-- 工具框架 -->
+        <lombok.version>1.18.24</lombok.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <hutool.version>5.8.27</hutool.version>
+        <ip2region.version>2.7.0</ip2region.version>
+        <easyexcel.version>3.0.5</easyexcel.version>
+        <!-- maven插件 -->
+        <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
+        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+        <central-publishing-maven-plugin.version>0.4.0</central-publishing-maven-plugin.version>
+        <!-- 以上依赖都是不在spring相关dependencies下的，所以要固定版本号，禁止随意修改 -->
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- sherly-common -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-common</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-env -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-env</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-excel -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-excel</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-ip -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-ip</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-mybatis -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-mybatis</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-pulsar -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-pulsar</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-redis -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-redis</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-rpc -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-rpc</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-security -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-security</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-test -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-test</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-web -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- sherly-xxljob -->
+            <dependency>
+                <groupId>cn.starlight-software</groupId>
+                <artifactId>sherly-xxljob</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- spring-boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- spring-cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- spring-cloud-alibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- spring-boot-jdbc -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!-- mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- mybatis-plus注解 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- dynamic-datasource -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic-datasource.version}</version>
+            </dependency>
+
+            <!-- redis -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- minio -->
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio.version}</version>
+            </dependency>
+
+            <!-- swagger3注解 -->
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <!-- knife4j -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- knife4j-gateway -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId> <!-- 接口文档 UI：knife4j【网关专属】 -->
+                <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- hutool-all -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- mapstruct-->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+
+            <!-- pulsar -->
+            <dependency>
+                <groupId>org.apache.pulsar</groupId>
+                <artifactId>pulsar-client</artifactId>
+                <version>${pulsar.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-slf4j-impl</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- xxljob -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxljob.version}</version>
+            </dependency>
+
+            <!-- ip2region -->
+            <dependency>
+                <groupId>net.dreamlu</groupId>
+                <artifactId>mica-ip2region</artifactId>
+                <version>${ip2region.version}</version>
+            </dependency>
+
+            <!-- easy-excel -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
+            <!-- flowable -->
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-spring-boot-starter-process</artifactId>
+                <version>${flowable.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>mybatis</artifactId>
+                        <groupId>org.mybatis</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-bpmn-layout</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-json-converter</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombok.version}</version>
+                            </path>
+                            <path>
+                                <groupId>org.mapstruct</groupId>
+                                <artifactId>mapstruct-processor</artifactId>
+                                <version>${mapstruct.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <!-- 打包源码 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- java-doc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- gpg签名 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>${maven-gpg-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- central-publishing -->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                </configuration>
+            </plugin>
+            <!-- 统一 revision 版本 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                    <updatePomFile>true</updatePomFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                    </execution>
+                    <execution>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>${serverId}</id>
+            <url>https://central.sonatype.com/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

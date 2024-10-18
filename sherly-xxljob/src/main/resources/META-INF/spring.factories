@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.starlightsoftware.sherly.xxljob.config.XxlJobConfig
