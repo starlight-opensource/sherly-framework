@@ -52,11 +52,10 @@
         <revision>2.0.7</revision>
         <serverId>central</serverId>
         <!-- 核心框架 -->
-        <spring-boot.version>2.7.8</spring-boot.version>
+        <spring-boot.version>2.7.18</spring-boot.version>
         <!-- 微服务框架 -->
-        <spring-cloud.version>2021.0.3</spring-cloud.version>
-        <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
-        <alibaba.nacos.version>2.0.4</alibaba.nacos.version>
+        <spring-cloud.version>2021.0.9</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.6.1</spring-cloud-alibaba.version>
 
 
         <!-- 以下依赖都是不在spring相关dependencies下的，所以要固定版本号，禁止随意修改 -->
@@ -76,12 +75,12 @@
         <minio.version>8.5.1</minio.version>
         <!-- 工具框架 -->
         <lombok.version>1.18.24</lombok.version>
-        <mapstruct.version>1.4.2.Final</mapstruct.version>
-        <hutool.version>5.8.27</hutool.version>
+        <mapstruct.version>1.6.2</mapstruct.version>
+        <hutool.version>5.8.32</hutool.version>
         <ip2region.version>2.7.0</ip2region.version>
-        <easyexcel.version>3.0.5</easyexcel.version>
+        <easyexcel.version>4.0.3</easyexcel.version>
         <!-- maven插件 -->
-        <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
+        <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
@@ -441,7 +440,7 @@
                 <artifactId>flatten-maven-plugin</artifactId>
                 <version>${flatten-maven-plugin.version}</version>
                 <configuration>
-                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                    <flattenMode>bom</flattenMode>
                     <updatePomFile>true</updatePomFile>
                 </configuration>
                 <executions>
