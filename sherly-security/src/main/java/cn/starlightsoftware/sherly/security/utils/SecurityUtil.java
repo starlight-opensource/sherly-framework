@@ -85,6 +85,7 @@ public final class SecurityUtil {
             context = new HashMap<>();
         }
         context.put(key, value);
+        getThreadLocalModel().setContext(context);
     }
 
 }
