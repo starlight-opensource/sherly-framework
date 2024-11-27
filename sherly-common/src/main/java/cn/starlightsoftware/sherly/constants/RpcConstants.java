@@ -3,8 +3,8 @@ package cn.starlightsoftware.sherly.constants;
 /**
  * @author 谷子毅
  */
-public interface RpcConstants {
+public class RpcConstants {
 
-    String RPC_API_PREFIX = "/rpc-api";
+    public static final String RPC_API_PREFIX = "/rpc-api";
 
 }
