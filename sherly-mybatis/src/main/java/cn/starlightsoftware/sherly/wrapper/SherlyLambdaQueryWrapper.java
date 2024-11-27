@@ -12,7 +12,6 @@ import java.util.List;
 /**
  * 对 mybatisPlus lambdaQueryWrapper包装
  * @author 谷子毅
- * @date 2022/6/10
  */
 public class SherlyLambdaQueryWrapper<T> extends LambdaQueryWrapper<T> {
 

@@ -18,7 +18,6 @@ import java.util.List;
 /**
  * 增强的 mapper 接口，方便 mapper 层的一些简单调用
  * @author 谷子毅
- * @date 2023/3/16
  */
 public interface SherlyMapper<T> extends BaseMapper<T> {
 

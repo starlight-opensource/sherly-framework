@@ -6,7 +6,6 @@ import lombok.Getter;
 /**
  * 业务异常
  * @author 谷子毅
- * @date 2022/3/23
  */
 @Getter
 public class BizException extends RuntimeException {

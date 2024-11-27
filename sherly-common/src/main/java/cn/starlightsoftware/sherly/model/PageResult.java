@@ -8,7 +8,6 @@ import java.util.List;
 /**
  * 通用分页返回类
  * @author 谷子毅
- * @date 2022/3/22
  */
 @Data
 public class PageResult<T> {

@@ -9,7 +9,6 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 
 /**
  * @author 谷子毅
- * @date 2023/9/1
  */
 @Configuration
 @EnableCaching

@@ -8,7 +8,6 @@ import java.util.Date;
 
 /**
  * @author 谷子毅
- * @date 2022/12/29
  */
 @Data
 public abstract class BaseModel {

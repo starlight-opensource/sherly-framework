@@ -49,7 +49,7 @@
     </modules>
 
     <properties>
-        <revision>2.0.7</revision>
+        <revision>2.1.0</revision>
         <serverId>central</serverId>
         <!-- 核心框架 -->
         <spring-boot.version>2.7.18</spring-boot.version>

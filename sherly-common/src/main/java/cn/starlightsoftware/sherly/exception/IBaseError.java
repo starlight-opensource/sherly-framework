@@ -2,7 +2,6 @@ package cn.starlightsoftware.sherly.exception;
 
 /**
  * @author 谷子毅
- * @date 2022/3/23
  */
 public interface IBaseError {
 

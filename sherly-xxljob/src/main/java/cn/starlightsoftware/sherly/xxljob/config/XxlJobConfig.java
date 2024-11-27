@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author 谷子毅
- * @date 2024/7/17
  */
 @Slf4j
 @Configuration

@@ -17,7 +17,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author 谷子毅
- * @date 2024/7/5
  */
 @Data
 @Configuration

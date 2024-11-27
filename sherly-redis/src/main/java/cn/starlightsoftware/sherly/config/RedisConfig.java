@@ -10,7 +10,6 @@ import javax.annotation.Resource;
 
 /**
  * @author 谷子毅
- * @date 2022/11/13
  */
 @Configuration
 public class RedisConfig {

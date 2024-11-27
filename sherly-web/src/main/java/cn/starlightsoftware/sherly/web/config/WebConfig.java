@@ -10,7 +10,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @author 谷子毅
- * @date 2024/4/26
  */
 @Configuration
 public class WebConfig {

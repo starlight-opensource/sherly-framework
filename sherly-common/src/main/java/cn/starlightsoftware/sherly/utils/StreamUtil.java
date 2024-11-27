@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 /**
  * 参考 yudao-cloud的CollectionUtils
  * @author 谷子毅
- * @date 2024/5/14
  */
 public class StreamUtil {
 
