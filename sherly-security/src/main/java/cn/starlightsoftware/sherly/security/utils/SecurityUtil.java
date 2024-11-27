@@ -22,7 +22,23 @@ public final class SecurityUtil {
     }
 
     public static String getInfo(String key) {
-        return getThreadLocalModel().getInfo().getOrDefault(key, null);
+        return getInfo(key, String.class);
+    }
+
+    public static <T> T getInfo(String key, Class<T> type) {
+        Map<String, Object> info = getThreadLocalModel().getInfo();
+        return MapUtil.get(info, key, type);
+    }
+
+    public static void setInfo(String key, String value) {
+        LoginUserDetails threadLocalModel = getThreadLocalModel();
+        Map<String, Object> info = threadLocalModel.getInfo();
+        if (MapUtil.isEmpty(info)) {
+            info = new HashMap<>();
+        }
+        info.put(key, value);
+        threadLocalModel.setInfo(info);
+        setThreadLocalModel(threadLocalModel);
     }
 
     public static String getLoginUserId() {

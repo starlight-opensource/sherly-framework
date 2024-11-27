@@ -25,7 +25,7 @@ public class LoginUserDetails {
     private String operateTenantCode;
 
     /** 登录用户额外信息 */
-    private Map<String, String> info;
+    private Map<String, Object> info;
 
     /** 权限 */
     private Set<String> scopes;
