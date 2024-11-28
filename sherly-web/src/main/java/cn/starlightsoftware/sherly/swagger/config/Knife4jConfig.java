@@ -30,33 +30,9 @@ public class Knife4jConfig {
 
     @Bean
     public GroupedOpenApi adminApi() {
-        String[] paths = {"/admin-api/**"};
+        String[] paths = {"/admin-api/**", "/app-api/**", "/rpc-api/**", "/open-api/**"};
         return GroupedOpenApi.builder()
-                .group(title + "-admin-api")
-                .pathsToMatch(paths)
-                .packagesToScan()
-                .addOperationCustomizer((operation, handlerMethod) -> operation
-                        .addParametersItem(createParameter()))
-                .build();
-    }
-
-    @Bean
-    public GroupedOpenApi appApi() {
-        String[] paths = {"/app-api/**"};
-        return GroupedOpenApi.builder()
-                .group(title + "-app-api")
-                .pathsToMatch(paths)
-                .packagesToScan()
-                .addOperationCustomizer((operation, handlerMethod) -> operation
-                        .addParametersItem(createParameter()))
-                .build();
-    }
-
-    @Bean
-    public GroupedOpenApi rpcApi() {
-        String[] paths = {"/rpc-api/**"};
-        return GroupedOpenApi.builder()
-                .group(title + "-rpc-api")
+                .group(title + "-api")
                 .pathsToMatch(paths)
                 .packagesToScan()
                 .addOperationCustomizer((operation, handlerMethod) -> operation
