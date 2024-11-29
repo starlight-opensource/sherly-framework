@@ -1,3 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  cn.starlightsoftware.sherly.web.config.WebConfig,\
-  cn.starlightsoftware.sherly.swagger.config.Knife4jConfig
+  cn.starlightsoftware.sherly.web.config.WebConfig

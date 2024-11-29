@@ -19,11 +19,13 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void configurePathMatch(PathMatchConfigurer configurer) {
-                // 所有controller.admin的url前面加个"/admin-api"
                 AntPathMatcher antPathMatcher = new AntPathMatcher(".");
+                // 所有controller.admin的url前面加个"/admin-api"
                 configurer.addPathPrefix("admin-api", clazz -> (clazz.isAnnotationPresent(RestController.class) || clazz.isAnnotationPresent(Controller.class)) && antPathMatcher.match("**.controller.admin.**", clazz.getPackage().getName()));
                 // 所有controller.app的url前面加个"/app-api"
                 configurer.addPathPrefix("app-api", clazz -> (clazz.isAnnotationPresent(RestController.class) || clazz.isAnnotationPresent(Controller.class)) && antPathMatcher.match("**.controller.app.**", clazz.getPackage().getName()));
+                // 所有controller.open的url前面加个"/open-api"
+                configurer.addPathPrefix("open-api", clazz -> (clazz.isAnnotationPresent(RestController.class) || clazz.isAnnotationPresent(Controller.class)) && antPathMatcher.match("**.controller.open.**", clazz.getPackage().getName()));
             }
         };
     }
