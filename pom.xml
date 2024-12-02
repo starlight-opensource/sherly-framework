@@ -43,9 +43,7 @@
         <module>sherly-xxljob</module>
         <module>sherly-web</module>
         <module>sherly-pulsar</module>
-        <module>sherly-env</module>
         <module>sherly-test</module>
-        <module>sherly-ip</module>
     </modules>
 
     <properties>
@@ -101,24 +99,10 @@
                 <version>${revision}</version>
             </dependency>
 
-            <!-- sherly-env -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-env</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
             <!-- sherly-excel -->
             <dependency>
                 <groupId>cn.starlight-software</groupId>
                 <artifactId>sherly-excel</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <!-- sherly-ip -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-ip</artifactId>
                 <version>${revision}</version>
             </dependency>
 
