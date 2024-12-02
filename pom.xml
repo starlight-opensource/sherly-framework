@@ -38,12 +38,8 @@
         <module>sherly-mybatis</module>
         <module>sherly-redis</module>
         <module>sherly-security</module>
-        <module>sherly-rpc</module>
-        <module>sherly-excel</module>
         <module>sherly-xxljob</module>
         <module>sherly-web</module>
-        <module>sherly-pulsar</module>
-        <module>sherly-test</module>
     </modules>
 
     <properties>
@@ -99,24 +95,10 @@
                 <version>${revision}</version>
             </dependency>
 
-            <!-- sherly-excel -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-excel</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
             <!-- sherly-mybatis -->
             <dependency>
                 <groupId>cn.starlight-software</groupId>
                 <artifactId>sherly-mybatis</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <!-- sherly-pulsar -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-pulsar</artifactId>
                 <version>${revision}</version>
             </dependency>
 
@@ -127,24 +109,10 @@
                 <version>${revision}</version>
             </dependency>
 
-            <!-- sherly-rpc -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-rpc</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
             <!-- sherly-security -->
             <dependency>
                 <groupId>cn.starlight-software</groupId>
                 <artifactId>sherly-security</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <!-- sherly-test -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-test</artifactId>
                 <version>${revision}</version>
             </dependency>
 
