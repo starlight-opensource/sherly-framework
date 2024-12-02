@@ -45,27 +45,27 @@ public final class SecurityUtil {
         return getThreadLocalModel().getLoginUserId();
     }
 
-    public static String getTenantCode() {
-        return getThreadLocalModel().getTenantCode();
+    public static String getTenantId() {
+        return getThreadLocalModel().getTenantId();
     }
 
     public static Set<String> getScopes() {
         return getThreadLocalModel().getScopes();
     }
 
-    public static void setOperateTenantCode(String tenantCode) {
+    public static void setOperateTenantId(String tenantId) {
         LoginUserDetails threadLocalModel = getThreadLocalModel();
-        threadLocalModel.setTenantCode(tenantCode);
+        threadLocalModel.setTenantId(tenantId);
         setThreadLocalModel(threadLocalModel);
     }
 
-    public static String getOperateTenantCode() {
-        return getThreadLocalModel().getTenantCode();
+    public static String getOperateTenantId() {
+        return getThreadLocalModel().getTenantId();
     }
 
-    public static void clearOperateTenantCode() {
+    public static void clearOperateTenantId() {
         LoginUserDetails threadLocalModel = getThreadLocalModel();
-        threadLocalModel.setTenantCode(null);
+        threadLocalModel.setTenantId(null);
         SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(threadLocalModel, null));
     }
 

@@ -18,11 +18,11 @@ public class LoginUserDetails {
     /** 登录用户编号 */
     private String loginUserId;
 
-    /** 租户代码 */
-    private String tenantCode;
+    /** 租户编号 */
+    private String tenantId;
 
-    /** 特殊操作数据库代码 */
-    private String operateTenantCode;
+    /** 特殊操作数据库编号 */
+    private String operateTenantId;
 
     /** 登录用户额外信息 */
     private Map<String, Object> info;
