@@ -45,6 +45,10 @@ public final class SecurityUtil {
         return getThreadLocalModel().getLoginUserId();
     }
 
+    public static String getLoginId() {
+        return getThreadLocalModel().getLoginUserId() + ":" + getThreadLocalModel().getLoginTime();
+    }
+
     public static String getTenantId() {
         return getThreadLocalModel().getTenantId();
     }
