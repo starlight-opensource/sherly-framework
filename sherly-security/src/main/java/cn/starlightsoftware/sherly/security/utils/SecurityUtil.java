@@ -45,7 +45,7 @@ public final class SecurityUtil {
         return getThreadLocalModel().getLoginUserId();
     }
 
-    public static Long getLoginTime() {
+    public static String getLoginTime() {
         return getThreadLocalModel().getLoginTime();
     }
 

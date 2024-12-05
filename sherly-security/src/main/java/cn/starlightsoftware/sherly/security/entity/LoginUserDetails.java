@@ -19,7 +19,7 @@ public class LoginUserDetails {
     private String loginUserId;
 
     /** 登录时间 */
-    private Long loginTime;
+    private String loginTime;
 
     /** 租户编号 */
     private String tenantId;
