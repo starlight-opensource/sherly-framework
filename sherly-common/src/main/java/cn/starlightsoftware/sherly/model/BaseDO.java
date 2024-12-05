@@ -10,7 +10,7 @@ import java.util.Date;
  * @author 谷子毅
  */
 @Data
-public abstract class BaseModel {
+public abstract class BaseDO {
 
     /** 创建时间 */
     @TableField(fill = FieldFill.INSERT)
