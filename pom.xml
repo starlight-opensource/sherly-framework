@@ -35,11 +35,7 @@
 
     <modules>
         <module>sherly-common</module>
-        <module>sherly-mybatis</module>
-        <module>sherly-redis</module>
-        <module>sherly-security</module>
         <module>sherly-xxljob</module>
-        <module>sherly-web</module>
     </modules>
 
     <properties>

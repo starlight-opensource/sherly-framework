@@ -1,3 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  cn.starlightsoftware.sherly.config.RedisConfig,\
-  cn.starlightsoftware.sherly.config.RedissonConfig

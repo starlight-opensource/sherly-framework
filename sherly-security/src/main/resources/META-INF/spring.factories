@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  cn.starlightsoftware.sherly.security.handler.AccessDeniedHandlerImpl,\
-  cn.starlightsoftware.sherly.security.handler.AuthenticationEntryPointImpl,\
-  cn.starlightsoftware.sherly.security.handler.ScopeHandler
