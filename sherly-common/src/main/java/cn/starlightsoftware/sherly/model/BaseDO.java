@@ -2,7 +2,6 @@ package cn.starlightsoftware.sherly.model;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 import java.util.Date;
@@ -28,12 +27,5 @@ public abstract class BaseDO {
     /** 更新人编号 */
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private String updateUserId;
-
-    /** 租户编号 */
-    private String tenantId;
-
-    /** 逻辑删除 */
-    @TableLogic
-    private Boolean deleted;
 
 }
