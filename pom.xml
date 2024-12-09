@@ -39,7 +39,7 @@
     </modules>
 
     <properties>
-        <revision>2.1.0</revision>
+        <revision>2.1.1</revision>
         <serverId>central</serverId>
         <!-- 核心框架 -->
         <spring-boot.version>2.7.18</spring-boot.version>
@@ -88,34 +88,6 @@
             <dependency>
                 <groupId>cn.starlight-software</groupId>
                 <artifactId>sherly-common</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <!-- sherly-mybatis -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-mybatis</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <!-- sherly-redis -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-redis</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <!-- sherly-security -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-security</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <!-- sherly-web -->
-            <dependency>
-                <groupId>cn.starlight-software</groupId>
-                <artifactId>sherly-web</artifactId>
                 <version>${revision}</version>
             </dependency>
 

@@ -2,6 +2,7 @@ package cn.starlightsoftware.sherly.model;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 import java.util.Date;
@@ -28,19 +29,11 @@ public abstract class BaseDO {
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private String updateUserId;
 
-    /*
-        逻辑删除
-        如果要使用逻辑删除功能，请在 继承了 BaseModel 的父类添加 deleted 字段，并使用注解 @TableLogic
-        关于 mybatis-plus 逻辑删除的详情请移步 mybatis-plus 官方文档
+    /** 租户编号 */
+    private String tenantId;
 
-        JAVA:
-        /-- 逻辑删除 -/
-        @TableLogic
-        private BooleanEnum deleted;
-
-        SQL:
-        `deleted` tinyint NOT NULL DEFAULT 0,
-
-     */
+    /** 逻辑删除 */
+    @TableLogic
+    private Boolean deleted;
 
 }
