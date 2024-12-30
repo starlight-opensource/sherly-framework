@@ -19,5 +19,5 @@ public class PageQuery {
 
     /** 页大小 */
     @Schema(description = "页大小")
-    private Integer size = 20;
+    private Integer size = 10;
 }
