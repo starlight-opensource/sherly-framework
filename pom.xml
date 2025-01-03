@@ -45,7 +45,7 @@
         <spring-boot.version>2.7.18</spring-boot.version>
         <!-- 微服务框架 -->
         <spring-cloud.version>2021.0.9</spring-cloud.version>
-        <spring-cloud-alibaba.version>2021.0.6.1</spring-cloud-alibaba.version>
+        <spring-cloud-alibaba.version>2021.0.6.2</spring-cloud-alibaba.version>
 
 
         <!-- 以下依赖都是不在spring相关dependencies下的，所以要固定版本号，禁止随意修改 -->
@@ -64,14 +64,13 @@
         <pulsar.version>2.11.0</pulsar.version>
         <minio.version>8.5.1</minio.version>
         <!-- 工具框架 -->
-        <lombok.version>1.18.24</lombok.version>
-        <mapstruct.version>1.6.2</mapstruct.version>
-        <hutool.version>5.8.32</hutool.version>
-        <ip2region.version>2.7.0</ip2region.version>
+        <lombok.version>1.18.36</lombok.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+        <hutool.version>5.8.35</hutool.version>
         <easyexcel.version>4.0.3</easyexcel.version>
         <!-- maven插件 -->
         <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
@@ -229,13 +228,6 @@
                 <version>${xxljob.version}</version>
             </dependency>
 
-            <!-- ip2region -->
-            <dependency>
-                <groupId>net.dreamlu</groupId>
-                <artifactId>mica-ip2region</artifactId>
-                <version>${ip2region.version}</version>
-            </dependency>
-
             <!-- easy-excel -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -281,9 +273,12 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
                         <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-configuration-processor</artifactId>
+                                <version>${spring-boot.version}</version>
+                            </path>
                             <path>
                                 <groupId>org.projectlombok</groupId>
                                 <artifactId>lombok</artifactId>
