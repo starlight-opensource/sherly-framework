@@ -11,6 +11,8 @@
 
     <artifactId>sherly-xxljob</artifactId>
 
+    <name>sherly-xxljob</name>
+
     <dependencies>
         <!-- sherly-common -->
         <dependency>

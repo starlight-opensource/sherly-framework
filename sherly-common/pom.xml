@@ -11,6 +11,8 @@
 
     <artifactId>sherly-common</artifactId>
 
+    <name>sherly-common</name>
+
     <dependencies>
         <!-- lombok -->
         <dependency>
