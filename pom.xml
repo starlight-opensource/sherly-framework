@@ -39,7 +39,7 @@
     </modules>
 
     <properties>
-        <revision>2.1.4</revision>
+        <revision>2.1.5</revision>
         <serverId>central</serverId>
         <!-- 核心框架 -->
         <spring-boot.version>2.7.18</spring-boot.version>
@@ -55,10 +55,10 @@
         <swagger.version>2.2.8</swagger.version>
         <springdoc.version>1.6.14</springdoc.version>
         <!-- ORM框架 -->
-        <mybatis-plus.version>3.5.7</mybatis-plus.version>
+        <mybatis-plus.version>3.5.15</mybatis-plus.version>
         <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
         <redisson.version>3.18.0</redisson.version>
-        <lock4j.version>2.2.6</lock4j.version>
+        <lock4j.version>2.2.7</lock4j.version>
         <!-- 服务框架 -->
         <xxljob.version>2.4.1</xxljob.version>
         <flowable.version>6.8.0</flowable.version>
@@ -66,7 +66,7 @@
         <!-- 工具框架 -->
         <lombok.version>1.18.36</lombok.version>
         <mapstruct.version>1.6.3</mapstruct.version>
-        <hutool.version>5.8.35</hutool.version>
+        <hutool.version>5.8.43</hutool.version>
         <easyexcel.version>4.0.3</easyexcel.version>
         <!-- maven插件 -->
         <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
