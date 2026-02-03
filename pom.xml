@@ -39,7 +39,7 @@
     </modules>
 
     <properties>
-        <revision>2.1.5</revision>
+        <revision>2.1.6</revision>
         <serverId>central</serverId>
         <!-- 核心框架 -->
         <spring-boot.version>2.7.18</spring-boot.version>
@@ -149,6 +149,12 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-jsqlparser-4.9</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
 
